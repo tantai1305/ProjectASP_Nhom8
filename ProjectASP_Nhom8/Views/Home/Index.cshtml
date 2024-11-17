@@ -1,0 +1,77 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body class="img js-fullheight" style="background-image: url(/images/biatdc.jpg);">
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <img src="/images/logo.png" alt="TDC" width="50%"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:-8%;">
+                <div class="navbar-nav py-0">
+                    <a class="nav-item nav-link active" style="font-size:1.5rem" asp-controller="Home" asp-action="TrangChu">Trang Chủ</a>
+                    <a href="#" class="nav-item nav-link" style="font-size:1.5rem">Doanh Nghiệp</a>
+                    <a href="#" class="nav-item nav-link" style="font-size:1.5rem">Tham Quan</a>
+                    <a href="#" class="nav-item nav-link" style="font-size:1.5rem">Liên Hệ</a>
+                </div>
+            </div>
+            <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">Đăng nhập</a>
+
+        </nav>
+    </div>
+    <!-- Navbar & Hero End -->
+
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h1 class="heading-section">Đăng nhập</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap p-0">
+                        <form action="/api/auth/login" class="signin-form" method="post">
+                            <div class="form-group">
+                                <input type="text" id="username" name="TaiKhoan" class="form-control" placeholder="Tài khoản" required>
+                            </div>
+                            <div class="form-group">
+                                <input id="password-field" type="password" name="MatKhau" class="form-control" placeholder="Mật khẩu" required>
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary submit px-3">Đăng nhập</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>
+</html>
+

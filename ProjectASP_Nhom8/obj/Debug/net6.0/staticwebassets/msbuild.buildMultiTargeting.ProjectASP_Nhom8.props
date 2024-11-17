@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ProjectASP_Nhom8.props" />
+</Project>

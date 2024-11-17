@@ -1,0 +1,95 @@
+﻿@{
+    var userRole = HttpContextAccessor.HttpContext.Session.GetString("UserRole");
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style_trangchu.css">
+</head>
+
+<body>
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <img src="/images/logo.png" alt="TDC" width="50%" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:-8%;">
+                <div class="navbar-nav py-0">
+                    <a class="nav-item nav-link active" style="font-size:1.5rem" asp-controller="Home" asp-action="Trangchu">Trang Chủ</a>
+                    <a class="nav-item nav-link" style="font-size:1.5rem" >Doanh Nghiệp</a>
+                    <a href="#" class="nav-item nav-link" style="font-size:1.5rem">Tham Quan</a>
+                    <a href="#footer" class="nav-item nav-link" style="font-size:1.5rem">Liên Hệ</a>
+                    @if (userRole == "Giảng Viên")
+                    {
+                            <a class="nav-item nav-link" style="font-size:1.5rem" href="/giangvien">Quản lý Giảng Viên</a>
+                    }
+                    @if (userRole == "Sinh Viên")
+                    {
+                            <a class="nav-item nav-link" style="font-size:1.5rem" href="/sinhvien">Quản lý Sinh Viên</a>
+                    }
+                </div>
+            </div>
+            @if (userRole != null)
+            {
+                <form action="/logout" class="signin-form" method="post">
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary submit px-3">Đăng xuất</button>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" asp-controller="Home" asp-action="Index">Đăng nhập</a>
+            }
+        </nav>
+    </div>
+    <div class="content">
+        <section class="banner">
+            <img src="~/images/banner.jpg" alt="Lễ ký kết hợp tác giữa TDC và doanh nghiệp">
+        </section>
+
+        <section class="news">
+            <article>
+                <img src="/images/news1.jpg" alt="TDC ký kết hợp tác MOU cùng Công ty JL Peoples Co, LTD Hàn Quốc">
+                <h2>TDC ký kết hợp tác MOU cùng Công ty Cổ phần JL Peoples Co, LTD Hàn Quốc</h2>
+                <p class="date">Ngày 28, Tháng Tám, 2024</p>
+                <p>Chiều 28/8, ông Võ Long Triều – Hiệu trưởng Trường Cao đẳng Công nghệ Thủ Đức (TDC) đã làm việc cùng ông Lee Choung Bum – Chủ tịch sáng lập Hiệp hội Phúc lợi Junghee (Hàn Quốc) và các cộng sự. Qua đó, thực hiện ký kết hợp tác đào tạo MOU cùng Công ty Cổ phần JL Peoples Co, LTD Hàn Quốc...</p>
+            </article>
+            <article>
+                <img src="/images/news2.jpg" alt="TDC ký kết hợp tác đào tạo cùng Công ty Nguồn nhân lực Quốc tế Thuận An KYOTO">
+                <h2>TDC ký kết hợp tác đào tạo cùng Công ty Cổ phần Nguồn nhân lực Quốc tế Thuận An KYOTO</h2>
+                <p class="date">Ngày 22, Tháng Chín, 2024</p>
+                <p>Ngày 22/9, ông Võ Long Triều – Hiệu trưởng Trường Cao đẳng Công nghệ Thủ Đức (TDC) đã tiếp và làm việc cùng ông Nguyễn Đăng Minh Luân – Chủ tịch Hội đồng Quản trị Công ty Cổ phần Nguồn nhân lực Quốc tế Thuận An KYOTO...</p>
+            </article>
+        </section>
+    </div>
+    <footer id="footer">
+        <div class="contact-info">
+            <div>Phòng Tổ chức - Hành chính : 02838966825</div>
+            <div>Phòng Quản lý đào tạo : 02838970023</div>
+            <div>Phòng Kế hoạch - Tài chính : 02862820044</div>
+            <div>Phòng Công tác chính trị - Học sinh sinh viên : 02822158640</div>
+            <div>Fax: 02838962474</div>
+            <div>Website: <a href="http://tdc.edu.vn">www.tdc.edu.vn</a></div>
+            <div>Email: <a href="mailto:tdc@mail.tdc.edu.vn">tdc@mail.tdc.edu.vn</a> - <a href="mailto:tdc@tdc.edu.vn">tdc@tdc.edu.vn</a></div>
+        </div>
+    </footer>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>
+</html>

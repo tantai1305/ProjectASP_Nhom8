@@ -1,0 +1,72 @@
+﻿@model ProjectASP_Nhom8.Models.SinhVien
+
+@{
+    ViewData["Title"] = "CapNhatSinhVien";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Thêm SV</title>
+    <!-- Favicon-->
+    @* <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> *@
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~/css/style_DSSV.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cập nhật thông tin sinh viên</h1>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="CapNhatSinhVien" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Mssv" />
+                    <div class="form-group">
+                        <label asp-for="HoTen" class="control-label">Họ Tên</label>
+                        <input asp-for="HoTen" class="form-control" />
+                        <span asp-validation-for="HoTen" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Sdt" class="control-label">SĐT</label>
+                        <input asp-for="Sdt" class="form-control" />
+                        <span asp-validation-for="Sdt" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TaiKhoan" class="control-label">Tài Khoản</label>
+                        <select asp-for="TaiKhoan" class="form-control" asp-items="@ViewBag.DanhSachTaiKhoan">
+                            <option value="none">Chọn</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="submit" value="Cập nhật" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="DSSinhVien">Quay lại</a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
