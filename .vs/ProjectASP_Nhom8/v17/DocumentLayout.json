@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\dsdoanhnghiepadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\dsdoanhnghiepadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\dsgiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\dsgiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\dsdangkytheomasv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\dsdangkytheomasv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\dschuyenthamquanhientai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\dschuyenthamquanhientai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,85 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TrangChu.cshtml",
-              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
-              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
-              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
-              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAADsAAAAgAAAA",
+              "DocumentIndex": 0,
+              "Title": "DSDoanhNghiepAdmin.cshtml",
+              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSDoanhNghiepAdmin.cshtml",
+              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\DSDoanhNghiepAdmin.cshtml",
+              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSDoanhNghiepAdmin.cshtml",
+              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSDoanhNghiepAdmin.cshtml",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAAH8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T06:19:33.277Z",
+              "WhenOpened": "2024-11-19T14:26:51.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\appsettings.json",
-              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\appsettings.json",
-              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\appsettings.json",
-              "RelativeToolTip": "ProjectASP_Nhom8\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-19T06:17:39.656Z",
+              "Title": "DSDangKyTheoMaSV.cshtml",
+              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
+              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
+              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
+              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAAAEsAAACLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T14:22:35.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DSGiangVien.cshtml",
+              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSGiangVien.cshtml",
+              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\DSGiangVien.cshtml",
+              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSGiangVien.cshtml",
+              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSGiangVien.cshtml",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T14:22:25.277Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Program.cs",
-              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Program.cs",
-              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Program.cs",
-              "RelativeToolTip": "ProjectASP_Nhom8\\Program.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAAwDEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T06:16:43.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "ProjectASP_Nhom8\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAAwDgAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T06:06:47.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DSChuyenThamQuanHienTai.cshtml",
-              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanHienTai.cshtml",
-              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanHienTai.cshtml",
-              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanHienTai.cshtml",
-              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanHienTai.cshtml",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAAAAwAAAAXAAAA",
+              "Title": "TrangChu.cshtml",
+              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
+              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
+              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
+              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T05:59:54.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Controllers\\HomeController.cs",
-              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "ProjectASP_Nhom8\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAEkBAAAAAAAAAAAswFkBAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T05:40:29.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T14:20:56.075Z"
             }
           ]
         }

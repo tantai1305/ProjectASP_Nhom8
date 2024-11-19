@@ -1,0 +1,33 @@
+﻿@model ProjectASP_Nhom8.Models.DoanhNghiep
+
+@{
+    ViewData["Title"] = "XoaDoanhNghiep";
+}
+
+<h1>XoaDoanhNghiep</h1>
+
+<h3>Bạn có muốn xóa ?</h3>
+<div>
+    <h4>DoanhNghiep</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TenDn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TenDn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+    </dl>
+
+    <form asp-action="XoaDoanhNghiep">
+        <input type="hidden" asp-for="MaDn" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

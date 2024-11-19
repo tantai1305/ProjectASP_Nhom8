@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/CapNhatDoanhNghiep.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXBOaGF0RG9hbmhOZ2hpZXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/CapNhatGiangVien.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXBOaGF0R2lhbmdWaWVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +42,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEU0RhbmdLeVRoZW9NYVNWLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/DSDoanhNghiep.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEU0RvYW5oTmdoaWVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/DSDoanhNghiepAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEU0RvYW5oTmdoaWVwQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/DSGiangVien.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEU0dpYW5nVmllbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/ThemDoanhNghiep.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGVtRG9hbmhOZ2hpZXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/ThemGiangVien.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGVtR2lhbmdWaWVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/TrangChu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuZ0NodS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/XoaDoanhNghiep.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxYb2FEb2FuaE5naGllcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Shared/_ValidationScriptsPartial.cshtml]
