@@ -56,7 +56,7 @@ namespace ProjectASP_Nhom8.Controllers
             // Đăng nhập thành công
             // Lưu quyền vào session hoặc cookie
             HttpContext.Session.SetString("UserRole", taiKhoan.Quyen);
-
+            HttpContext.Session.SetString("MaSV", taiKhoan.TaiKhoan1);
             // Đăng nhập thành công và chuyển hướng về trang chủ
             return RedirectToAction("TrangChu", "Home");
         }
