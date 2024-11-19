@@ -1,0 +1,218 @@
+﻿@model IEnumerable<ProjectASP_Nhom8.Models.DangKy>
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@{
+    ViewData["Title"] = "DSDangKyTheoMaSV";
+}
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    var userRole = HttpContextAccessor.HttpContext.Session.GetString("UserRole");
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style_trangchu.css">
+    <link rel="stylesheet" href="~/css/style_DSDaDangKy.css">
+    <style>
+        .custom-table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+            .custom-table thead {
+                background-color: #3366ff !important; /* Ghi đè Bootstrap */
+                color: white !important;
+                font-weight: bold;
+            }
+
+            .custom-table th,
+            .custom-table td {
+                padding: 15px;
+                text-align: left;
+                border: 1px solid #ddd;
+            }
+
+            .custom-table tbody tr:nth-child(odd) {
+                background-color: #f9f9f9;
+            }
+
+            .custom-table tbody tr:nth-child(even) {
+                background-color: #e6f3ff;
+            }
+
+            .custom-table tbody tr:hover {
+                background-color: #cce7ff;
+                cursor: pointer;
+            }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <img src="/images/logo.png" alt="TDC" width="50%" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:-8%;">
+                <div class="navbar-nav py-0">
+                    <a class="nav-item nav-link active" style="font-size:1.5rem" asp-controller="Home" asp-action="Trangchu">Trang Chủ</a>
+                    <a class="nav-item nav-link" style="font-size:1.5rem">Doanh Nghiệp</a>
+                    <a class="nav-item nav-link" style="font-size:1.5rem" asp-controller="Home" asp-action="DSChuyenThamQuanHienTai">Tham Quan</a>
+                    <a class="nav-item nav-link" style="font-size:1.5rem" asp-controller="Home" asp-action="DSDangKyTheoMaSV">Danh sách đăng ký</a>
+                    <a href="#footer" class="nav-item nav-link" style="font-size:1.5rem">Liên Hệ</a>
+                </div>
+            </div>
+            @if (userRole != null)
+            {
+                <form action="/logout" class="signin-form" method="post">
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary submit px-3">Đăng xuất</button>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" asp-controller="Home" asp-action="Index">Đăng nhập</a>
+            }
+
+        </nav>
+    </div>
+    <h1 style="text-align: center; font-family: Arial, sans-serif; color: #333; margin-top:3%">Danh sách đã đăng ký</h1>
+
+    @if (TempData["DaDienRa"] != null)
+    {
+        <div id="daDienRa" class="alert alert-warning">
+            @TempData["DaDienRa"]
+        </div>
+    }
+
+    @if (TempData["ThongBaoXoa"] != null)
+    {
+        <div id="xoa" class="alert alert-success">
+            @TempData["ThongBaoXoa"]
+        </div>
+    }
+
+    @if (TempData["QuaTH"] != null)
+    {
+        <div id="quaTH" class="alert alert-warning">
+            @TempData["QuaTH"]
+        </div>
+    }
+
+    <script>
+        // Ẩn thông báo sau 3 giây
+        setTimeout(function () {
+            var xoa = document.getElementById("xoa");
+            var dadienRa = document.getElementById("daDienRa");
+            var quaTH = document.getElementById("quaTH");
+            if (xoa) {
+                xoa.style.display = "none";
+            }
+            if (dadienRa) {
+                dadienRa.style.display = "none";
+            }
+            if (quaTH) {
+                quaTH.style.display = "none";
+            }
+        }, 3000);
+    </script>
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th>
+                    Ngày đăng ký
+                </th>
+                <th>
+                    @* @Html.DisplayNameFor(model => model.MaThamQuanNavigation.MoTa) *@
+                    Tên doanh nghiệp
+                </th>
+                @*   <th>
+                @Html.DisplayNameFor(model => model.MssvNavigation)
+                </th> *@
+                <td>
+                    Ngày tổ chức
+                </td>
+                <th>
+                    Thời gian tham quan
+                </th>
+                <th>
+                    Thời gian kết thúc
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => (item.NgayDangKy))
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaThamQuanNavigation.MaDnNavigation.TenDn)
+                    </td>
+                    @*   <td>
+                @Html.DisplayFor(modelItem => item.MssvNavigation.Mssv)
+                </td> *@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaThamQuanNavigation.NgayToChuc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaThamQuanNavigation.ThoiGianBatDau)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaThamQuanNavigation.ThoiGianKetThuc)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Hủy đăng ký", "HuyDangKy", new { maSV = item.Mssv, maTQ = item.MaThamQuan }, new { onclick = "return confirm('Bạn có chắc muốn hủy đăng ký?')" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div style="margin-left:3%;">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("DSDangKyTheoMaSV",
+                 new { page = page }),
+                 new X.PagedList.Mvc.Core.PagedListRenderOptions
+        {
+            ContainerDivClasses = new[] { "navigation" },
+            LiElementClasses = new[] { "page-item" },
+            PageClasses = new[] { "page-link" }
+        })
+    </div>
+    <footer id="footer">
+        <div class="contact-info">
+            <div>Phòng Tổ chức - Hành chính : 02838966825</div>
+            <div>Phòng Quản lý đào tạo : 02838970023</div>
+            <div>Phòng Kế hoạch - Tài chính : 02862820044</div>
+            <div>Phòng Công tác chính trị - Học sinh sinh viên : 02822158640</div>
+            <div>Fax: 02838962474</div>
+            <div>Website: <a href="http://tdc.edu.vn">www.tdc.edu.vn</a></div>
+            <div>Email: <a href="mailto:tdc@mail.tdc.edu.vn">tdc@mail.tdc.edu.vn</a> - <a href="mailto:tdc@tdc.edu.vn">tdc@tdc.edu.vn</a></div>
+        </div>
+    </footer>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>
+</html>
