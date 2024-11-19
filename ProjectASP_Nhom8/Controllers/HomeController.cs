@@ -342,5 +342,135 @@ namespace ProjectASP_Nhom8.Controllers
 
             return RedirectToAction("DSDangKyTheoMaSV");
         }
+        //Hiển thị doanh nghiệp ở trang chủ
+        public IActionResult DSDoanhNghiep()
+        {
+            var danhSach = _DB.DoanhNghieps.ToList();
+            return View(danhSach);
+        }
+
+        //Hiển thị doanh nghiệp ở admin
+        public IActionResult DSDoanhNghiepAdmin()
+        {
+            var danhSach = _DB.DoanhNghieps.ToList();
+            return View(danhSach);
+        }
+
+        //Thêm doanh nghiệp 
+        public IActionResult ThemDoanhNghiep()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ThemDoanhNghiep(DoanhNghiep doanhNghiep)
+        {
+            try
+            {
+                // Kiểm tra giá trị đầu vào
+                if (string.IsNullOrWhiteSpace(doanhNghiep.MaDn) || string.IsNullOrWhiteSpace(doanhNghiep.TenDn))
+                {
+                    ViewBag.ThongBao = "Mã và Tên Doanh nghiệp không được để trống.";
+                    var dsDoanhNghiep = _DB.DoanhNghieps.ToList();
+                    ViewBag.DanhSachDoanhNghiep = new SelectList(dsDoanhNghiep, "MaDn", "TenDn");
+                    return View("ThemDoanhNghiep");
+                }
+
+                // Kiểm tra trùng lặp Mã Doanh nghiệp
+                if (_DB.DoanhNghieps.Any(e => e.MaDn == doanhNghiep.MaDn))
+                {
+                    ViewBag.ThongBao = "Mã Doanh nghiệp đã tồn tại.";
+                    var dsDoanhNghiep = _DB.DoanhNghieps.ToList();
+                    ViewBag.DanhSachDoanhNghiep = new SelectList(dsDoanhNghiep, "MaDn", "TenDn");
+                    return View("ThemDoanhNghiep");
+                }
+
+                // Kiểm tra trùng lặp Tên Doanh nghiệp
+                if (_DB.DoanhNghieps.Any(e => e.DiaChi == doanhNghiep.DiaChi && e.TenDn == doanhNghiep.TenDn))
+                {
+                    ViewBag.ThongBao = "Doanh nghiệp đã tồn tại.";
+                    var dsDoanhNghiep = _DB.DoanhNghieps.ToList();
+                    ViewBag.DanhSachDoanhNghiep = new SelectList(dsDoanhNghiep, "MaDn", "TenDn");
+                    return View("ThemDoanhNghiep");
+                }
+
+                // Thêm mới doanh nghiệp
+                _DB.DoanhNghieps.Add(doanhNghiep);
+                _DB.SaveChanges();
+
+                TempData["ThongBaoThem"] = "Thêm Doanh nghiệp thành công.";
+                return RedirectToAction("DSDoanhNghiepAdmin");
+            }
+            catch (DbUpdateException ex)
+            {
+                // Xử lý lỗi cập nhật cơ sở dữ liệu
+                ViewBag.ThongBao = "Lỗi khi lưu dữ liệu: " + ex.InnerException?.Message;
+                var dsDoanhNghiep = _DB.DoanhNghieps.ToList();
+                ViewBag.DanhSachDoanhNghiep = new SelectList(dsDoanhNghiep, "MaDn", "TenDn");
+                return View("ThemDoanhNghiep");
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi không mong muốn
+                ViewBag.ThongBao = "Đã xảy ra lỗi: " + ex.Message;
+                var dsDoanhNghiep = _DB.DoanhNghieps.ToList();
+                ViewBag.DanhSachDoanhNghiep = new SelectList(dsDoanhNghiep, "MaDn", "TenDn");
+                return View("ThemDoanhNghiep");
+            }
+        }
+
+        //Xóa doanh nghiệp
+        public IActionResult XoaDoanhNghiep(string maDN)
+        {
+            var dn = _DB.DoanhNghieps.FirstOrDefault(d => d.MaDn == maDN);
+
+            if (dn != null)
+            {
+                // Kiểm tra nếu có chuyến tham quan liên quan
+                bool hasRelatedRecords = _DB.ChuyenThamQuans.Any(ctq => ctq.MaDn == maDN);
+                if (hasRelatedRecords)
+                {
+                    TempData["ThongBaoXoa"] = "Không thể xóa doanh nghiệp vì có chuyến tham quan liên quan.";
+                    return RedirectToAction("DSDoanhNghiepAdmin");
+                }
+
+                // Xóa doanh nghiệp nếu không có bản ghi liên quan
+                _DB.DoanhNghieps.Remove(dn);
+                _DB.SaveChanges();
+
+                TempData["ThongBaoXoa"] = "Xóa thành công";
+            }
+            return RedirectToAction("DSDoanhNghiepAdmin");
+        }
+
+        //Cập nhật doanh nghiệp
+        public IActionResult CapNhatDoanhNghiep(string maDN)
+        {
+            var doanhNghiep = _DB.DoanhNghieps.Where(e => e.MaDn == maDN).FirstOrDefault();
+            return View(doanhNghiep);
+        }
+
+        [HttpPost]
+        public IActionResult CapNhatDoanhNghiep(DoanhNghiep doanhNghiep)
+        {
+            if (doanhNghiep != null)
+            {
+                // Kiểm tra xem tên và địa chỉ đã tồn tại trong cơ sở dữ liệu chưa, ngoại trừ bản ghi hiện tại
+                var existingDoanhNghiep = _DB.DoanhNghieps
+                    .FirstOrDefault(dn => dn.TenDn == doanhNghiep.TenDn && dn.DiaChi == doanhNghiep.DiaChi && dn.MaDn != doanhNghiep.MaDn);
+
+                if (existingDoanhNghiep != null)
+                {
+                    // Nếu tìm thấy bản ghi trùng lặp, trả về thông báo lỗi
+                    TempData["ThongBaoSua"] = "Tên doanh nghiệp và địa chỉ đã tồn tại trong hệ thống!";
+                    return RedirectToAction("DSDoanhNghiepAdmin");
+                }
+
+                // Nếu không trùng lặp, thực hiện cập nhật
+                _DB.DoanhNghieps.Update(doanhNghiep);
+                _DB.SaveChanges();
+                TempData["ThongBaoSua"] = "Cập nhật doanh nghiệp thành công!";
+            }
+            return RedirectToAction("DSDoanhNghiepAdmin");
+        }
     }
 }
