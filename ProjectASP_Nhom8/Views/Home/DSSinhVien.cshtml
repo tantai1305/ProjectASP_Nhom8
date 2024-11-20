@@ -4,6 +4,7 @@
 
 @{
     ViewData["Title"] = "DSSinhVien";
+    var userRole = HttpContextAccessor.HttpContext.Session.GetString("UserRole");
 }
 
 <html lang="en">
@@ -22,6 +23,52 @@
 </head>
 
 <body>   
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <img src="/images/logo.png" alt="TDC" width="50%" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:-8%;">
+                <div class="navbar-nav py-0">
+                    <a class="nav-item nav-link active" style="font-size:1rem" asp-controller="Home" asp-action="Trangchu">Trang Chủ</a>
+                    @if (userRole == "Giảng Viên" || userRole == "Sinh Viên")
+                    {
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSDoanhNghiep">Doanh Nghiệp</a>
+                    }
+
+                    @if (userRole == "Sinh Viên")
+                    {
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSChuyenThamQuanHienTai">Tham Quan</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSDangKyTheoMaSV">Danh sách đăng ký</a>
+                    }
+
+                    @if (userRole == "Admin")
+                    {
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSGiangVien">Quản lý giảng viên</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSSinhVien">Quản lý sinh viên</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSChuyenThamQuanAdmin">Quản lý chuyến tham quan</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSDoanhNghiepAdmin">Quản lý doanh nghiệp</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSTaiKhoan">Quản lý tài khoản</a>
+                    }
+                    <a href="#footer" class="nav-item nav-link" style="font-size:1rem">Liên Hệ</a>
+                </div>
+            </div>
+            @if (userRole != null)
+            {
+                <form action="/logout" class="signin-form" method="post">
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary submit px-3">Đăng xuất</button>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" asp-controller="Home" asp-action="Index">Đăng nhập</a>
+            }
+        </nav>
     <section class="py-5">
         <div class="container px-4 px-lg-5 my-5">
             @if (TempData["ThongBaoThem"] != null)

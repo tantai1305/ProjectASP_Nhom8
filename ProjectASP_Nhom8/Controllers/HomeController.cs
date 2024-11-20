@@ -55,11 +55,7 @@ namespace ProjectASP_Nhom8.Controllers
             {
                 return RedirectToAction("AccessDenied", "Home"); // Trang thông báo lỗi truy cập
             }
-            var dsTaiKhoan = _DB.TaiKhoans
-                .Where(e => e.Quyen.Equals("Sinh Viên"))
-                .Select(tk => tk.TaiKhoan1)
-                .Except(_DB.SinhViens.Select(sv => sv.TaiKhoan)) //loại bỏ các tài khoản đã có trong bang SinhVien
-                .ToList();
+            var dsTaiKhoan = _DB.TaiKhoans.Where(t => !t.TaiKhoan1.Contains("GV")).ToList();          
             ViewBag.DanhSachTaiKhoan = new SelectList(dsTaiKhoan, "TaiKhoan1", "TaiKhoan1");
             return View();
         }
@@ -71,11 +67,15 @@ namespace ProjectASP_Nhom8.Controllers
             if (_DB.SinhViens.Any(e => e.Mssv == sinhVien.Mssv))
             {
                 ViewBag.ThongBao = "Mã sinh viên đã tồn tại. Vui lòng kiểm tra lại";
-                var dsTaiKhoan = _DB.TaiKhoans
-                .Where(e => e.Quyen.Equals("Sinh Viên"))
-                .Select(tk => tk.TaiKhoan1)
-                .Except(_DB.SinhViens.Select(sv => sv.TaiKhoan)) //loại bỏ các tài khoản đã có trong bang SinhVien
-                .ToList();
+                var dsTaiKhoan = _DB.TaiKhoans.Where(t => !t.TaiKhoan1.Contains("GV")).ToList();
+                ViewBag.DanhSachTaiKhoan = new SelectList(dsTaiKhoan, "TaiKhoan1", "TaiKhoan1");
+                return View("ThemSinhVien");
+            }
+
+            if (_DB.SinhViens.Any(e => e.Mssv != sinhVien.Mssv && e.TaiKhoan == sinhVien.TaiKhoan))
+            {
+                ViewBag.ThongBao = "Tài khoản này đã được phân cho sinh viên khác. Vui lòng kiểm tra lại";
+                var dsTaiKhoan = _DB.TaiKhoans.Where(t => !t.TaiKhoan1.Contains("GV")).ToList();
                 ViewBag.DanhSachTaiKhoan = new SelectList(dsTaiKhoan, "TaiKhoan1", "TaiKhoan1");
                 return View("ThemSinhVien");
             }
@@ -121,11 +121,7 @@ namespace ProjectASP_Nhom8.Controllers
                 return RedirectToAction("AccessDenied", "Home"); // Trang thông báo lỗi truy cập
             }
             var sinhVien = _DB.SinhViens.FirstOrDefault(e => e.Mssv == maSV);
-            var dsTaiKhoan = _DB.TaiKhoans
-                            .Where(e => e.Quyen.Equals("Sinh Viên"))
-                            .Select(tk => tk.TaiKhoan1)
-                            .Except(_DB.SinhViens.Select(sv => sv.TaiKhoan)) //loại bỏ các tài khoản đã có trong bang SinhVien
-                            .ToList();
+            var dsTaiKhoan = _DB.TaiKhoans.Where(t => !t.TaiKhoan1.Contains("GV")).ToList();
             ViewBag.DanhSachTaiKhoan = new SelectList(dsTaiKhoan, "TaiKhoan1", "TaiKhoan1");
             return View(sinhVien);
         }
@@ -559,6 +555,18 @@ namespace ProjectASP_Nhom8.Controllers
             }
 
             return View(danhSachDangKy); // Trả về view với dữ liệu
+        }
+
+        //Danh sách sinh viên
+        public IActionResult DSTaiKhoan(int? page)
+        {
+            var danhSach = _DB.TaiKhoans.ToPagedList(page ?? 1, 5);
+            return View(danhSach);
+        }
+
+        public IActionResult ThemTaiKhoan()
+        {
+            return View();
         }
     }
 }

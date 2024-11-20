@@ -71,11 +71,27 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:-8%;">
                 <div class="navbar-nav py-0">
-                    <a class="nav-item nav-link active" style="font-size:1.5rem" asp-controller="Home" asp-action="Trangchu">Trang Chủ</a>
-                    <a class="nav-item nav-link" style="font-size:1.5rem" asp-controller="Home" asp-action="DSDoanhNghiep">Doanh Nghiệp</a>
-                    <a class="nav-item nav-link" style="font-size:1.5rem" asp-controller="Home" asp-action="DSChuyenThamQuanHienTai">Tham Quan</a>
-                    <a class="nav-item nav-link" style="font-size:1.5rem" asp-controller="Home" asp-action="DSDangKyTheoMaSV">Danh sách đăng ký</a>
-                    <a href="#footer" class="nav-item nav-link" style="font-size:1.5rem">Liên Hệ</a>
+                    <a class="nav-item nav-link active" style="font-size:1rem" asp-controller="Home" asp-action="Trangchu">Trang Chủ</a>
+                    @if (userRole == "Giảng Viên" || userRole == "Sinh Viên")
+                    {
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSDoanhNghiep">Doanh Nghiệp</a>
+                    }
+
+                    @if (userRole == "Sinh Viên")
+                    {
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSChuyenThamQuanHienTai">Tham Quan</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSDangKyTheoMaSV">Danh sách đăng ký</a>
+                    }
+
+                    @if (userRole == "Admin")
+                    {
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSGiangVien">Quản lý giảng viên</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSSinhVien">Quản lý sinh viên</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSChuyenThamQuanAdmin">Quản lý chuyến tham quan</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSDoanhNghiepAdmin">Quản lý doanh nghiệp</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSTaiKhoan">Quản lý tài khoản</a>
+                    }
+                    <a href="#footer" class="nav-item nav-link" style="font-size:1rem">Liên Hệ</a>
                 </div>
             </div>
             @if (userRole != null)
@@ -90,7 +106,6 @@
             {
                 <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" asp-controller="Home" asp-action="Index">Đăng nhập</a>
             }
-
         </nav>
     </div>
     <h1 style="text-align: center; font-family: Arial, sans-serif; color: #333; margin-top:3%">Danh sách chuyến tham quan</h1>

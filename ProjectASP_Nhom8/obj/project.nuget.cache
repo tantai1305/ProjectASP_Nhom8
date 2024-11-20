@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "soa+BO9mhUUur/aUCJYwj/aKapmUJyORrSYQwFH+dlxEehXSJTkyxs21dwOWL7XgsdqaYxTavNayPRBaiNpnxg==",
+  "dgSpecHash": "AgULTodnZ2AN+3YSmNPXSuq/1BXAH/Gfzq3sBKKMCZQg048pHMJcGNPtdtNPUzLQshr4AFIo+eSXUG2ZFa7H4A==",
   "success": true,
-  "projectFilePath": "E:\\btapcacmon\\ASP\\Bản up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj",
+  "projectFilePath": "E:\\ASP\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
@@ -214,11 +214,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\x.pagedlist\\10.2.1\\x.pagedlist.10.2.1.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\x.pagedlist.mvc.core\\10.2.1\\x.pagedlist.mvc.core.10.2.1.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\x.pagedlist.mvc.core\\10.2.1\\x.pagedlist.mvc.core.10.2.1.nupkg.sha512"
   ],
   "logs": []
 }

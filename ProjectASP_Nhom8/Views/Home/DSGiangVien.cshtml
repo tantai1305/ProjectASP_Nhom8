@@ -3,6 +3,7 @@
 @using X.PagedList;
 @{
     ViewData["Title"] = "DSGiangVien";
+    var userRole = HttpContextAccessor.HttpContext.Session.GetString("UserRole");
 }
 
 <html lang="en">
@@ -21,120 +22,166 @@
 </head>
 
 <body>
-    <section class="py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            @if (TempData["ThongBaoThem"] != null)
-            {
-                <div id="them" class="alert alert-success">
-                    @TempData["ThongBaoThem"]
-                </div>
-            }
-
-            @if (TempData["ThongBaoXoa"] != null)
-            {
-                <div id="xoa" class="alert alert-danger">
-                    @TempData["ThongBaoXoa"]
-                </div>
-            }
-
-            @if (TempData["ThongBaoSua"] != null)
-            {
-                <div id="sua" class="alert alert-success">
-                    @TempData["ThongBaoSua"]
-                </div>
-            }
-
-            <script>
-                // Ẩn thông báo sau 3 giây
-                setTimeout(function () {
-                    var them = document.getElementById("them");
-                    var xoa = document.getElementById("xoa");
-                    var sua = document.getElementById("sua");
-
-                    if (them) {
-                        them.style.display = "none";
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <img src="/images/logo.png" alt="TDC" width="50%" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:-8%;">
+                <div class="navbar-nav py-0">
+                    <a class="nav-item nav-link active" style="font-size:1rem" asp-controller="Home" asp-action="Trangchu">Trang Chủ</a>
+                    @if (userRole == "Giảng Viên" || userRole == "Sinh Viên")
+                    {
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSDoanhNghiep">Doanh Nghiệp</a>
                     }
-                    if (xoa) {
-                        xoa.style.display = "none";
-                    }
-                    if (sua) {
-                        sua.style.display = "none";
-                    }
-                }, 3000);
-            </script>
 
-            <h1 class="mb-5">Danh sách giảng viên</h1>
-            <div class="row gx-4 gx-lg-5 align-items-center">
-                <div class="table-wrapper">
-                    <div class="table-title">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h2>Quản Lý <b>Giảng viên</b></h2>
-                            </div>
-                            <div class="col-sm-6 d-flex justify-content-end">
-                                <a class="btn btn-success" data-toggle="modal" asp-action="ThemGiangVien">
-                                    <i class="bi bi-pencil"></i><span>Thêm giảng viên</span>
-                                </a>
+                    @if (userRole == "Sinh Viên")
+                    {
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSChuyenThamQuanHienTai">Tham Quan</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSDangKyTheoMaSV">Danh sách đăng ký</a>
+                    }
+
+                    @if (userRole == "Admin")
+                    {
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSGiangVien">Quản lý giảng viên</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSSinhVien">Quản lý sinh viên</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSChuyenThamQuanAdmin">Quản lý chuyến tham quan</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSDoanhNghiepAdmin">Quản lý doanh nghiệp</a>
+                        <a class="nav-item nav-link" style="font-size:1rem" asp-controller="Home" asp-action="DSTaiKhoan">Quản lý tài khoản</a>
+                    }
+                    <a href="#footer" class="nav-item nav-link" style="font-size:1rem">Liên Hệ</a>
+                </div>
+            </div>
+            @if (userRole != null)
+            {
+                <form action="/logout" class="signin-form" method="post">
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary submit px-3">Đăng xuất</button>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" asp-controller="Home" asp-action="Index">Đăng nhập</a>
+            }
+        </nav>
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                @if (TempData["ThongBaoThem"] != null)
+                {
+                    <div id="them" class="alert alert-success">
+                        @TempData["ThongBaoThem"]
+                    </div>
+                }
+
+                @if (TempData["ThongBaoXoa"] != null)
+                {
+                    <div id="xoa" class="alert alert-danger">
+                        @TempData["ThongBaoXoa"]
+                    </div>
+                }
+
+                @if (TempData["ThongBaoSua"] != null)
+                {
+                    <div id="sua" class="alert alert-success">
+                        @TempData["ThongBaoSua"]
+                    </div>
+                }
+
+                <script>
+                    // Ẩn thông báo sau 3 giây
+                    setTimeout(function () {
+                        var them = document.getElementById("them");
+                        var xoa = document.getElementById("xoa");
+                        var sua = document.getElementById("sua");
+
+                        if (them) {
+                            them.style.display = "none";
+                        }
+                        if (xoa) {
+                            xoa.style.display = "none";
+                        }
+                        if (sua) {
+                            sua.style.display = "none";
+                        }
+                    }, 3000);
+                </script>
+
+                <h1 class="mb-5">Danh sách giảng viên</h1>
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Quản Lý <b>Giảng viên</b></h2>
+                                </div>
+                                <div class="col-sm-6 d-flex justify-content-end">
+                                    <a class="btn btn-success" data-toggle="modal" asp-action="ThemGiangVien">
+                                        <i class="bi bi-pencil"></i><span>Thêm giảng viên</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>MSGV</th>
-                                <th>Họ Tên</th>
-                                <th>SĐT</th>
-                                <th>Email</th>
-                                <th>Tài khoản</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Model)
-                            {
+                        <table class="table table-striped table-hover">
+                            <thead>
                                 <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Msgv)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.HoTen)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Sdt)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Email)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.TaiKhoan)
-                                    </td>
-                                    <td>
-                                        <a class="edit" data-toggle="modal" asp-action="CapNhatGiangVien" asp-route-maGV="@item.Msgv">
-                                            <i class="bi bi-pencil"></i>
-                                        </a>
-
-                                        <a class="delete" data-toggle="modal" asp-action="XoaGiangVien" asp-route-maGV="@item.Msgv" onclick="return confirm('Bạn có muốn xóa?')">
-                                            <i class="bi bi-trash"></i>
-                                        </a>
-                                    </td>
+                                    <th>MSGV</th>
+                                    <th>Họ Tên</th>
+                                    <th>SĐT</th>
+                                    <th>Email</th>
+                                    <th>Tài khoản</th>
+                                    <th>Actions</th>
                                 </tr>
-                            }
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Msgv)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.HoTen)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Sdt)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Email)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TaiKhoan)
+                                        </td>
+                                        <td>
+                                            <a class="edit" data-toggle="modal" asp-action="CapNhatGiangVien" asp-route-maGV="@item.Msgv">
+                                                <i class="bi bi-pencil"></i>
+                                            </a>
 
-                    <div class="clearfix">
-                        @Html.PagedListPager((IPagedList)Model, page => Url.Action("DSGiangVien",
-                                 new { page = page }),
-                                 new X.PagedList.Mvc.Core.PagedListRenderOptions
-                        {
+                                            <a class="delete" data-toggle="modal" asp-action="XoaGiangVien" asp-route-maGV="@item.Msgv" onclick="return confirm('Bạn có muốn xóa?')">
+                                                <i class="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                        <div class="clearfix">
+                            @Html.PagedListPager((IPagedList)Model, page => Url.Action("DSGiangVien",
+                            new { page = page }),
+                            new X.PagedList.Mvc.Core.PagedListRenderOptions
+                            {
                             ContainerDivClasses = new[] { "navigation" },
                             LiElementClasses = new[] { "page-item" },
                             PageClasses = new[] { "page-link" }
-                        })
+                            })
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 </body>
 </html>

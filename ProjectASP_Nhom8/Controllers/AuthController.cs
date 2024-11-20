@@ -20,7 +20,7 @@ namespace ProjectASP_Nhom8.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterDTO dto)
+        public async Task<IActionResult> Register([FromForm] RegisterDTO dto)
         {
             if (await _QLThamQuanDNContext.TaiKhoans.AnyAsync(t => t.TaiKhoan1 == dto.TaiKhoan))
                 return BadRequest("Tài khoản đã tồn tại.");
@@ -35,7 +35,7 @@ namespace ProjectASP_Nhom8.Controllers
             _QLThamQuanDNContext.TaiKhoans.Add(taiKhoan);
             await _QLThamQuanDNContext.SaveChangesAsync();
 
-            return Ok("Đăng ký thành công.");
+            return RedirectToAction("DSTaiKhoan", "Hhome");
         }
 
         [HttpPost("login")]
