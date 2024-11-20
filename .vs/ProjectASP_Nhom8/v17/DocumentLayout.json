@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
               "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
               "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
-              "ViewState": "AQIAAKUAAAAAAAAAAAAAAK8AAABaAAAA",
+              "ViewState": "AQIAAKUAAAAAAAAAAAAiwKsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-20T03:53:02.69Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanHienTai.cshtml",
               "ViewState": "AQIAALwAAAAAAAAAAAAAAMIAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T03:51:08.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T03:51:08.978Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "ProjectASP_Nhom8\\Models\\DangKy.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAwwBEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T03:30:51.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T03:30:51.04Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\XemDanhSachDangKy.cshtml",
               "ViewState": "AQIAAEkAAAAAAAAAAAAAAFgAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T03:27:03.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T03:27:03.714Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanAdmin.cshtml",
               "ViewState": "AQIAAAIAAAAAAAAAAAAAAA0AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T03:12:57.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T03:12:57.428Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "ProjectASP_Nhom8\\Controllers\\HomeController.cs",
               "ViewState": "AQIAABgCAAAAAAAAAAAAAB0CAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T03:08:09.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T03:08:09.697Z"
             }
           ]
         }
