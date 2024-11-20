@@ -1,0 +1,170 @@
+﻿@model IEnumerable<ProjectASP_Nhom8.Models.ChuyenThamQuan>
+
+@{
+    ViewData["Title"] = "DSChuyenThamQuanAdmin";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>DS Chuyến Tham Quan</title>
+    <!-- Favicon-->
+    @* <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> *@
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~/css/style_DSSV.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            @if (TempData["ThongBaoThem"] != null)
+            {
+                <div id="them" class="alert alert-success">
+                    @TempData["ThongBaoThem"]
+                </div>
+            }
+
+            @if (TempData["ThongBaoXoa"] != null)
+            {
+                <div id="xoa" class="alert alert-danger">
+                    @TempData["ThongBaoXoa"]
+                </div>
+            }
+
+            @if (TempData["ThongBaoSua"] != null)
+            {
+                <div id="sua" class="alert alert-success">
+                    @TempData["ThongBaoSua"]
+                </div>
+            }
+
+            <script>
+                // Ẩn thông báo sau 3 giây
+                setTimeout(function () {
+                    var them = document.getElementById("them");
+                    var xoa = document.getElementById("xoa");
+                    var sua = document.getElementById("sua");
+
+                    if (them) {
+                        them.style.display = "none";
+                    }
+                    if (xoa) {
+                        xoa.style.display = "none";
+                    }
+                    if (sua) {
+                        sua.style.display = "none";
+                    }
+                }, 3000);
+            </script>
+
+            <h1 class="mb-5">Danh sách chuyến tham quan</h1>
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2>Quản Lý <b>Chuyến Tham Quan</b></h2>
+                            </div>
+                            <div class="col-sm-6 d-flex justify-content-end">
+                                <a class="btn btn-success" data-toggle="modal" asp-action="TaoChuyenThamQuan">
+                                    <i class="bi bi-pencil"></i><span>Thêm chuyến tham quan</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.SoLuongNguoiThamGia)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.MoTa)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.NgayToChuc)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ThoiGianBatDau)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ThoiGianKetThuc)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.NienKhoa)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.HocKy)
+                                </th>
+                                <th>
+                                    Mã Giảng Viên
+                                </th>
+                                <th>
+                                    Tên doanh nghiệp
+                                </th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SoLuongNguoiThamGia)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MoTa)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NgayToChuc)
+
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ThoiGianBatDau)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ThoiGianKetThuc)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NienKhoa)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.HocKy)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MaDnNavigation.TenDn)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Msgv)
+                                    </td>
+                                    <td>
+                                        <a class="edit" data-toggle="modal" asp-action="SuaChuyenThamQuan" asp-route-id="@item.MaThamQuan">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+
+                                        <a class="delete" data-toggle="modal" asp-action="XoaChuyenThamQuan" asp-route-id="@item.MaThamQuan" onclick="return confirm('Bạn có muốn xóa?')">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                        
+                                    </td>
+                                    <td>
+                                        <a class="details" data-toggle="modal" asp-action="XemDanhSachDangKy" asp-route-maTQ="@item.MaThamQuan">
+                                            Xem danh sách đăng ký
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

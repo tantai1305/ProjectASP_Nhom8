@@ -472,5 +472,93 @@ namespace ProjectASP_Nhom8.Controllers
             }
             return RedirectToAction("DSDoanhNghiepAdmin");
         }
+        public IActionResult DSChuyenThamQuanAdmin()
+        {
+
+            var dsctq = _DB.ChuyenThamQuans.Include(dn => dn.MaDnNavigation).ToList();
+            return View(dsctq);
+        }
+
+        /// <summary>
+        /// Thêm chuyến tham quan.
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult TaoChuyenThamQuan()
+        {
+            var TKList = _DB.GiangViens.ToList();
+            var DNList = _DB.DoanhNghieps.ToList();
+
+            ViewBag.GiangVienList = new SelectList(TKList, "Msgv", "Msgv");
+            ViewBag.DoanhNghiepList = new SelectList(DNList, "MaDn", "TenDn");
+            return View();
+        }
+        [HttpPost]
+        public IActionResult TaoChuyenThamQuan(ChuyenThamQuan chuyenThamQuan)
+        {
+            _DB.ChuyenThamQuans.Add(chuyenThamQuan);
+            _DB.SaveChanges();
+            return RedirectToAction("DSChuyenThamQuanAdmin");
+        }
+
+        /// <summary>
+        /// Xóa chuyến tham quan.
+        /// </summary>
+        /// <param name="chuyenThamQuan"></param>
+        /// <returns></returns>
+        public IActionResult XoaChuyenThamQuan(string id)
+        {
+            var CTQ = _DB.ChuyenThamQuans.Where(t => t.MaThamQuan == id).FirstOrDefault();
+            _DB.Remove(CTQ);
+            _DB.SaveChanges();
+            return RedirectToAction("DSChuyenThamQuanAdmin");
+        }
+
+        /// <summary>
+        /// Sửa chuyến tham quan.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+
+        public IActionResult SuaChuyenThamQuan(string id)
+        {
+            var TKList = _DB.GiangViens.ToList();
+            var DNList = _DB.DoanhNghieps.ToList();
+
+            ViewBag.GiangVienList = new SelectList(TKList, "Msgv", "Msgv");
+            ViewBag.DoanhNghiepList = new SelectList(DNList, "MaDn", "TenDn");
+
+            var CTQ = _DB.ChuyenThamQuans.Where(t => t.MaThamQuan == id).FirstOrDefault();
+            return View(CTQ);
+        }
+
+        [HttpPost]
+        public IActionResult SuaChuyenThamQuan(ChuyenThamQuan ctq)
+        {
+            _DB.ChuyenThamQuans.Update(ctq);
+            _DB.SaveChanges();
+            return RedirectToAction("DSChuyenThamQuanAdmin");
+        }
+
+        public IActionResult XemDanhSachDangKy(string maTQ)
+        {
+
+            if (string.IsNullOrEmpty(maTQ))
+            {
+                return BadRequest("Mã tham quan không hợp lệ.");
+            }
+
+            var danhSachDangKy = _DB.DangKies
+                .Include(dk => dk.MaThamQuanNavigation) // Load bảng ChuyenThamQuan
+                .Include(dk => dk.MssvNavigation)      // Load bảng SinhVien
+                .Where(dk => dk.MaThamQuan == maTQ)
+                .ToList();
+
+            if (!danhSachDangKy.Any())
+            {
+                return Content("Không có dữ liệu đăng ký cho chuyến tham quan này.");
+            }
+
+            return View(danhSachDangKy); // Trả về view với dữ liệu
+        }
     }
 }

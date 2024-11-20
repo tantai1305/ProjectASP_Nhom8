@@ -12,5 +12,6 @@ namespace ProjectASP_Nhom8.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public virtual ChuyenThamQuan MaThamQuanNavigation { get; set; } = null!;
         public virtual SinhVien MssvNavigation { get; set; } = null!;
+
     }
 }
