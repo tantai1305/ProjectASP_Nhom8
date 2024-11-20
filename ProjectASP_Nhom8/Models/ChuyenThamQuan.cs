@@ -16,7 +16,7 @@ namespace ProjectASP_Nhom8.Models
         public string? MoTa { get; set; }
         [Display(Name = "Ngày tổ chức")]
         [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime NgayToChuc { get; set; }
         [Display(Name = "Thời gian bắt đầu")]
         [DataType(DataType.DateTime)]

@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXBOaGF0U2luaFZpZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/DSChuyenThamQuanAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEU0NodXllblRoYW1RdWFuQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/DSChuyenThamQuanHienTai.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEU0NodXllblRoYW1RdWFuSGllblRhaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,6 +66,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/SuaChuyenThamQuan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWFDaHV5ZW5UaGFtUXVhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/TaoChuyenThamQuan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUYW9DaHV5ZW5UaGFtUXVhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/ThemDoanhNghiep.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGVtRG9hbmhOZ2hpZXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -76,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/TrangChu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuZ0NodS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/XemDanhSachDangKy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxYZW1EYW5oU2FjaERhbmdLeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/btapcacmon/ASP/Bản up git/ProjectASP_Nhom8/ProjectASP_Nhom8/Views/Home/XoaDoanhNghiep.cshtml]

@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\dsdoanhnghiepadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\dsdoanhnghiepadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\dsgiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\dsgiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\dsdangkytheomasv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\dsdangkytheomasv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\dschuyenthamquanhientai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\dschuyenthamquanhientai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\xemdanhsachdangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\xemdanhsachdangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\views\\home\\dschuyenthamquanadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\views\\home\\dschuyenthamquanadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|e:\\btapcacmon\\asp\\b\u1EA3n up git\\projectasp_nhom8\\projectasp_nhom8\\models\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E024F6B8-ED24-4613-8F22-6202E2363B05}|ProjectASP_Nhom8\\ProjectASP_Nhom8.csproj|solutionrelative:projectasp_nhom8\\models\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +39,75 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DSDoanhNghiepAdmin.cshtml",
-              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSDoanhNghiepAdmin.cshtml",
-              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\DSDoanhNghiepAdmin.cshtml",
-              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSDoanhNghiepAdmin.cshtml",
-              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSDoanhNghiepAdmin.cshtml",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAAAH8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T14:26:51.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "DSDangKyTheoMaSV.cshtml",
               "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
               "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
               "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
               "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSDangKyTheoMaSV.cshtml",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAAAEsAAACLAAAA",
+              "ViewState": "AQIAAKUAAAAAAAAAAAAiwKsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T14:22:35.778Z",
+              "WhenOpened": "2024-11-20T03:53:02.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DSGiangVien.cshtml",
-              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSGiangVien.cshtml",
-              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\DSGiangVien.cshtml",
-              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSGiangVien.cshtml",
-              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSGiangVien.cshtml",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "DSChuyenThamQuanHienTai.cshtml",
+              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanHienTai.cshtml",
+              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanHienTai.cshtml",
+              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanHienTai.cshtml",
+              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanHienTai.cshtml",
+              "ViewState": "AQIAALwAAAAAAAAAAAAAAMIAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T14:22:25.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T03:51:08.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DangKy.cs",
+              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Models\\DangKy.cs",
+              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Models\\DangKy.cs",
+              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Models\\DangKy.cs",
+              "RelativeToolTip": "ProjectASP_Nhom8\\Models\\DangKy.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAwwBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T03:30:51.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "XemDanhSachDangKy.cshtml",
+              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\XemDanhSachDangKy.cshtml",
+              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\XemDanhSachDangKy.cshtml",
+              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\XemDanhSachDangKy.cshtml",
+              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\XemDanhSachDangKy.cshtml",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAAFgAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T03:27:03.714Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TrangChu.cshtml",
-              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
-              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
-              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
-              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\TrangChu.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "DSChuyenThamQuanAdmin.cshtml",
+              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanAdmin.cshtml",
+              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanAdmin.cshtml",
+              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanAdmin.cshtml",
+              "RelativeToolTip": "ProjectASP_Nhom8\\Views\\Home\\DSChuyenThamQuanAdmin.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAA0AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T14:20:56.075Z"
+              "WhenOpened": "2024-11-20T03:12:57.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ProjectASP_Nhom8\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\btapcacmon\\ASP\\B\u1EA3n up git\\ProjectASP_Nhom8\\ProjectASP_Nhom8\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ProjectASP_Nhom8\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABgCAAAAAAAAAAAAAB0CAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T03:08:09.697Z"
             }
           ]
         }
